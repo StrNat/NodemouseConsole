@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NodemMouse Console</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js
     "></script>
@@ -12,6 +12,13 @@
 </head>
 
 <body>
+    <div>
+        <div>接続先のラズパイマウスのIPアドレスをjs/setting.jsの
+            <span style="color:red;">NODEMOUSE_IPADDR</span>
+            に指定してください</div>
+        <span id="">現在の設定値：</span>
+        <span id="target"  style="color:red;"></span>
+    </div>
     <div id="status">切断中</div>
 
     <ul>
@@ -29,6 +36,7 @@
             </div>
         </li>
     </ul>
+    <script src="js/setting.js"></script>
     <script src="js/index.js"></script>
 </body>
 

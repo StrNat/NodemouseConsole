@@ -1,8 +1,12 @@
-var socket = io.connect('http://nodemouse.local:8080');
+var target = "http://" + NODEMOUSE_IPADDR + ":" + SOCKET_IO_PORT;
+
+var socket = io.connect(target);
 
 socket.on('connect', function (data) {
     document.getElementById("status").innerHTML = "接続中";
 });
+
+document.getElementById("target").innerHTML = NODEMOUSE_IPADDR;
 
 var domLeftSensor = document.getElementById("left");
 var domLeftFrontSensor = document.getElementById("leftfront");
